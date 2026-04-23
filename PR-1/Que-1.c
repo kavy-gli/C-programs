@@ -12,5 +12,6 @@ int main()
     area=2*pi*r;
 
     printf("%f\n",area);
+ }
 
     return 0;
