@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+int main()
+{
+    int dec, a, b, result;
+
+    printf("1 Addition\n");
+    printf("2 Subtraction\n");
+    printf("3 Multiplication\n");
+    printf("4 Division\n");
+    printf("5 Modulus\n");
+    printf("0 Exit\n");
+
+    printf("Enter a decision number: ");
+    scanf("%d", &dec);
+
+    if(dec != 0)
+    {
+        printf("Enter the first number: ");
+        scanf("%d", &a);
+
+        printf("Enter the second number: ");
+        scanf("%d", &b);
+    }
+
+    switch(dec)
+    {
+        case 1:
+            printf("You have chosen Addition\n");
+            result = a + b;
+            printf("The result is: %d", result);
+            break;
+
+        case 2:
+            printf("You have chosen Subtraction\n");
+            result = a - b;
+            printf("The result is: %d", result);
+            break;
+
+        case 3:
+            printf("You have chosen Multiplication\n");
+            result = a * b;
+            printf("The result is: %d", result);
+            break;
+
+        case 4:
+            printf("You have chosen Division\n");
+            if(b != 0)
+                printf("The result is: %d", a / b);
+            else
+                printf("Error: Division by zero is not allowed.");
+            break;
+
+        case 5:
+            printf("You have chosen Modulus\n");
+            if(b != 0)
+                printf("The result is: %d", a % b);
+            else
+                printf("Error: Modulus by zero is not allowed.");
+            break;
+
+        case 0:
+            printf("Exiting the program.");
+            break;
+
+        default:
+            printf("Invalid choice.");
+    }
+
+    return 0;
+}
